@@ -62,12 +62,12 @@
 <body>
     <div class="login">
         <label for="usern"><b><span style="border:2px solid black;padding:2px;background-color:rgb(241, 227, 227);color:black ;border-radius:5px ">USERNAME</span>  : </b></label>
-        <input type="text" placeholder="Enter Username" name="usern" id="u" required>
+        <input type="text" placeholder="Enter Username" name="username" id="u" required>
 
         <br>
         <br>
         <label for="pass"><b><span style="border:2px solid black;padding:2px ;background-color:rgb(241, 227, 227) ;color:black;border-radius:5px ">PASSWORD</span> : </b></label>
-        <input type="text" placeholder="Enter the password" name="pass" id="p" required>
+        <input type="text" placeholder="Enter the password" name="password" id="p" required>
         <br><br>
         <div class="remember">
             <span style="margin-left:120px;font-size:25px;color:whitesmoke;font-family:cursive">
@@ -80,7 +80,8 @@
         <br><br>
         <div class="loginbtn">
 
-            <input type="submit" value="LOGIN" id="log">
+            <input type="submit" value="LOGIN" id="log" onclick="validate();">
+
 
 
         </div>
@@ -89,5 +90,21 @@
 
     </div>
 </body>
+<script>
+    function  validate()  {            
+        var  username  =  document.getElementById("u").value;            
+        var  password  =  document.getElementById("p").value;            
+        if  (username  ==  null  ||  username  ==  "")  {                
+            alert("Please enter the username.");                
+            return  false;            
+        }            
+        if  (password  ==  null  ||  password  ==  "")  {                
+            alert("Please enter the password.");                
+            return  false;            
+        }            
+        alert('Login successful');                    
+    }
+</script>
+
 
 </html>

@@ -55,9 +55,24 @@
             autocomplete="off" style="margin-left:50px;font-size: 20px;"><br><br>
         <strong><span style="color:rgb(77, 1, 1);font-size:20px;margin-left:50px"><i class="fa fa-unlock-alt" style="margin-right: 10px"></i> LOGIN PASSWORD:</span></strong><br><br> <input type="password" name="pass" placeholder="Password:" style="font-size: 20px;margin-left:50px"></span>
 
-        <br><br><br> <input type="submit" value="LOGIN" class="login" style="color: black;font-size:20px">
+        <br><br><br> <input type="submit" value="LOGIN" class="login" style="color: black;font-size:20px;" onclick="validate();">
 
     </div>
 </body>
+<script>
+    function  validate()  {            
+        var  username  =  document.getElementById("u ").value;            
+        var  password  =  document.getElementById("p ").value;            
+        if  (username  ==  null  ||  username  ==  " ")  {                
+            alert("Please enter the username. ");                
+            return  false;            
+        }            
+        if  (password  ==  null  ||  password  ==  " ")  {                
+            alert("Please enter the password. ");                
+            return  false;            
+        }            
+        alert('Login successful');                    
+    }
+</script>
 
 </html>
