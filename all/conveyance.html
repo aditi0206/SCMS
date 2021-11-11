@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conveyance</title>
+    <link rel="icon" href="./images/mono.jpg" type=" icon">
+    <style>
+        body {
+            background-color: rgb(5, 16, 44);
+            overflow-x: hidden;
+        }
+        
+        #Text {
+            margin: 0 auto;
+            font-family: Tahoma, Geneva, sans-serif;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        #Text span {
+            display: block;
+        }
+        
+        #Text span:nth-child(1) {
+            font-size: 4em;
+            color: #ffffff;
+            text-shadow: 0px 5px 0px #959691, 0px 7px 0px #959691, 0px 15px 0px #858383;
+            line-height: 0.85;
+        }
+        
+        #Text span:nth-child(2) {
+            font-family: Pacifico;
+            color: red;
+            text-shadow: 0px 2px 0px white;
+            font-size: 20px;
+            margin-left: 150px;
+            margin-top: -25px;
+            transform: rotate(-15deg);
+        }
+        
+        #metro1 {
+            background-image: url('https://wpclipart.com/buildings/city/skyline/cityscape_T.png');
+            background-position: top;
+            height: 400px;
+        }
+        
+        #metro {
+            margin-top: -100px;
+            width: 100%;
+            height: 60px;
+            background-color: transparent;
+            transform: translateX(0px);
+            animation-name: movetrain;
+            animation-duration: 18s;
+            animation-iteration-count: infinite;
+        }
+        
+        #metro span {
+            display: inline-block;
+        }
+        
+        .door,
+        .door2 {
+            width: 30px;
+            height: 43px;
+            background-color: #CF1D01;
+            position: absolute;
+            margin-top: 18px;
+            margin-left: 10px;
+            box-shadow: inset 0 -5px 0 #961703;
+            border: 1px solid black;
+        }
+        
+        .door2 {
+            width: 25px;
+            margin-top: -18px;
+            margin-left: 215px;
+        }
+        
+        .door::before,
+        .door2::before {
+            content: "";
+            width: 20px;
+            height: 19px;
+            background-color: #008ACB;
+            box-shadow: inset 0 0 10px #004FC8, inset 0 2px 0 blue;
+            position: absolute;
+            margin-top: 4px;
+            margin-left: 2px;
+            border: 3px solid #961703;
+        }
+        
+        .door2::before {
+            width: 17px;
+            margin-left: 1px;
+        }
+        
+        .mirror,
+        .mirror1 {
+            width: 154px;
+            height: 15px;
+            background-color: #666665;
+            margin-top: 18px;
+            margin-left: 50px;
+            border: 1px solid black;
+        }
+        
+        .mirror1 {
+            width: 140px;
+            border-radius: 0 100% 0 0;
+        }
+        
+        .mirror span,
+        .mirror1 span {
+            display: inline-block;
+        }
+        
+        .m1,
+        .m2,
+        .m3,
+        .m4,
+        .m22 {
+            display: inline-block;
+            width: 35px;
+            height: 11px;
+            background-color: #008ACB;
+            position: absolute;
+            margin-top: 1px;
+            margin-left: 1px;
+            box-shadow: inset 0 0 8px #004FC8;
+            border: 1px solid blue;
+        }
+        
+        .m22 {
+            width: 70px;
+            border-radius: 0 100% 0 0;
+            margin-left: 42px;
+        }
+        
+        .m2 {
+            margin-left: 40px;
+        }
+        
+        .m3 {
+            margin-left: 79px;
+        }
+        
+        .m4 {
+            margin-left: 117px;
+        }
+        
+        .back {
+            background-color: #E3E1E1;
+            width: 250px;
+            height: 60px;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 8px 6px -6px yellow, inset 0 9px 0 #666665, inset 0 15px 0 black;
+        }
+        
+        .back::after {
+            content: "";
+            background-color: black;
+            width: 6px;
+            height: 10px;
+            position: absolute;
+            margin-left: 249px;
+            margin-top: 1px;
+            border-radius: 10px;
+        }
+        
+        .back::before {
+            content: "";
+            width: 250px;
+            height: 20px;
+            background-color: #CF1D01;
+            border-top: 1px solid #CF1D01;
+            box-shadow: inset 0px 4px 0px #E3E1E1, 0 4px 0px black, inset 0 -5px 0px #961703;
+            position: absolute;
+            margin-top: 40px;
+            border-radius: 0px 0px 10px 10px;
+        }
+        
+        .engine {
+            background-color: #E3E1E1;
+            width: 300px;
+            height: 60px;
+            border-radius: 0px 100% 10px 10px;
+            box-shadow: 0 8px 6px -6px yellow, inset 0 9px 0 #666665, inset 0 15px 0 black;
+        }
+        
+        .engine::before {
+            content: "";
+            width: 280px;
+            height: 20px;
+            background-color: #CF1D01;
+            border-top: 1px solid #CF1D01;
+            box-shadow: inset 0px 4px 0px #E3E1E1, 0 4px 0px black, inset 0 -5px 0px #961703;
+            position: absolute;
+            margin-top: 40px;
+            border-radius: 0 100% 10px 10px;
+        }
+        
+        .track {
+            background-color: #07b4cb;
+            width: 100%;
+            height: 10px;
+            border-top: 3px solid black;
+            position: relative;
+            margin-top: 5px;
+        }
+        
+        .engine::after {
+            content: "";
+            background-color: yellow;
+            width: 4px;
+            height: 4px;
+            position: absolute;
+            margin-left: 30px;
+            margin-top: -63px;
+            border-radius: 50%;
+            box-shadow: 0 0 10px yellow;
+            animation-name: spark1;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        
+        #electric {
+            width: 100%;
+            height: auto;
+            border-top: 1px solid black;
+            margin-top: 275px;
+            position: absolute;
+        }
+        
+        .spark1 {
+            width: 1px;
+            height: 30px;
+            background-color: black;
+            position: absolute;
+            margin-top: -32px;
+            margin-left: 52px;
+            transform: rotate(-70deg);
+        }
+        
+        .spark {
+            width: 1px;
+            height: 37px;
+            background-color: black;
+            display: inline-block;
+            position: absolute;
+            margin-top: -25px;
+            margin-left: 50px;
+            transform: rotate(70deg);
+        }
+        
+        @keyframes movetrain {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(100%);
+            }
+            80% {
+                transform: translateX(300px);
+            }
+            81% {
+                transform: translateX(310px);
+            }
+            82% {
+                transform: translateX(311px);
+            }
+            83% {
+                transform: translateX(312px);
+            }
+            84% {
+                transform: translateX(313px);
+            }
+            85% {
+                transform: translateX(314px);
+            }
+            89% {
+                transform: translateX(320px);
+            }
+            90% {
+                transform: translateX(400px);
+            }
+        }
+        
+        @keyframes spark1 {
+            100% {
+                background-color: red;
+            }
+            10% {
+                background-color: yellow;
+            }
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        table,
+        tr,
+        td,
+        th {
+            border: 3px solid white;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        table {
+            border-collapse: collapse;
+            margin: auto;
+            margin-top: 20px;
+        }
+        
+        table th,
+        td {
+            background-color: rgb(179, 214, 143);
+            font-size: 30px;
+        }
+        
+        .content {
+            text-align: center;
+            align-items: center;
+        }
+        
+        .H {
+            text-align: center;
+            color: rgb(15, 14, 14);
+            border: 3px solid white;
+            border-radius: 10px;
+            width: 95%;
+            height: 150px;
+            background-image: linear-gradient( rgb(198, 204, 224) 10%, rgb(69, 52, 221) 90%);
+            margin-top: 10px;
+            margin-left: 2%;
+        }
+        
+        .hy {
+            text-align: right;
+            margin-top: 20px;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        
+        .bird {
+            background-image: url("http://www.iamramraj.com/demo/Flying_birds_CSS_animation_examples/bird-cells.svg");
+            background-size: auto 100%;
+            width: 86px;
+            height: 125px;
+            will-change: background-position;
+            animation-name: fly-cycle;
+            animation-timing-function: steps(10);
+            animation-iteration-count: infinite;
+            animation-duration: 1s;
+            animation-delay: -0.5s;
+            color: #ffffff;
+        }
+        
+        @keyframes fly-cycle {
+            100% {
+                background-position: -900px 0;
+            }
+        }
+        
+        .ball {
+            width: 120px;
+            height: 80px;
+            background-image: linear-gradient( white 10%, rgb(177, 185, 223) 90%);
+            border-radius: 50%;
+            border: 3.5px solid rgb(227, 228, 235);
+            animation: bounce 8s linear infinite;
+            box-shadow: #fff;
+            margin-top: 30px;
+        }
+        
+        @keyframes bounce {
+            0% {
+                transform: scaleX(360deg);
+            }
+            40% {
+                transform: skewY(-360deg);
+            }
+            50% {
+                transform: translateX(1500px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a id="#"></a>
+
+    <div id="Text">
+        <span style="margin-top: 10px;">CONVEYANCE SYSTEM</span>
+    </div>
+    <div id="electric">
+    </div>
+    <div id="metro1">
+    </div>
+    <div id="metro">
+        <span class="back">
+           <div class="door"></div>
+           <div class="mirror">
+              <span class="m1"></span>
+        <span class="m2"></span>
+        <span class="m3"></span>
+        <span class="m4"></span>
+    </div>
+    <div class="door2"></div>
+    </span>
+    <span class="back">
+           <div class="door"></div>
+           <div class="mirror">
+              <span class="m1"></span>
+    <span class="m2"></span>
+    <span class="m3"></span>
+    <span class="m4"></span>
+    </div>
+    <div class="door2"></div>
+    </span>
+    <span class="engine">
+           <div class="spark">
+           </div><div class="spark1"></div>
+           <div class="door"></div>
+           <div class="mirror1">
+              <span class="m1"></span>
+    <span class="m22"></span>
+    </div>
+    </span>
+    </div>
+    <div class="track">
+    </div>
+    <div class="container">
+        <div class="ball">
+            <p style="color: black;text-align: center;font-size: 20px;margin-top: 20px;">WELCOME...</p>
+        </div>
+        <div class="bounce"></div>
+        <div class="bird-container bird-container--one">
+            <div class="bird bird--one"></div>
+        </div>
+    </div>
+    <div class="content">
+        <h1 style="color: white;font-size: 30px; text-align: center;margin-bottom: 10px;border: 4px solid white;padding: 5px;text-shadow: whitesmoke;">BUS TIMING FROM AND TO CANADIAN UNIVERSITY DUBAI AJMAN/SHARJAH</h1>
+        <h2 style="color: white;text-align: center;">Metro bus-Plate No-:Q22987</h2>
+        <h2 style="color: rgb(178, 214, 46);text-align: center;">Route:Dubai Mall Metro Station-City walk-Dubai Mall Metro Station</h2>
+        <table>
+            <tr>
+                <th> Dubai Mall Metro Station</th>
+                <th>City walk</th>
+            </tr>
+            <tr>
+                <td>8:00 A.M.</td>
+                <td>08:30 A.M.</td>
+            </tr>
+            <tr>
+                <td>09:00 A.M.</td>
+                <td>09:30 A.M.</td>
+            </tr>
+            <tr>
+                <td>10:00 A.M.</td>
+                <td>10:30 A.M.</td>
+            </tr>
+            <tr>
+                <td>11:00 A.M.</td>
+                <td>11:30 A.M.</td>
+            </tr>
+            <tr>
+                <td>12:00 A.M.</td>
+                <td>12:30 P.M.</td>
+            </tr>
+            <tr>
+                <td>01:00 P.M.</td>
+                <td>01:30 AP.M.</td>
+            </tr>
+            <tr>
+                <td>02:00 P.M.</td>
+                <td>02:30 P.M.</td>
+            </tr>
+            <tr>
+                <td>03:00 P.M.</td>
+                <td>03:30 P.M.</td>
+            </tr>
+        </table>
+    </div>
+    <div class="h">
+        <h2 style="color: white;text-align: center;"> Metro bus-Plate No-:T98234</h2>
+        <h2 style="color: crimson;text-align: center;"> Driver Details:Zahid:056-2926386</h2>
+        <h2 style="color: white;text-align: center;">CUD Bus</h2>
+        <h2 style="color: rgb(239, 240, 235);text-align: center;">Route:Dubai Mall Metro Station-AI Bada's Campus-City Walk</h2>
+        <table>
+            <tr>
+
+                <th>City walk</th>
+                <th>AI Bada's Campus</th>
+                <th>Dubai Mall Metro Station</th>
+            </tr>
+            <tr>
+                <td>8:00 A.M.</td>
+                <td>8:15 A.M.</td>
+                <td>08:30 A.M.</td>
+            </tr>
+            <tr>
+                <td>09:00 A.M.</td>
+                <td>9:15 A.M.</td>
+                <td>09:30 A.M.</td>
+            </tr>
+            <tr>
+                <td>10:00 A.M.</td>
+                <td>10:15 A.M.</td>
+                <td>10:30 A.M.</td>
+            </tr>
+            <tr>
+                <td>11:00 A.M.</td>
+                <td>11:15 A.M.</td>
+                <td>11:30 A.M.</td>
+            </tr>
+            <tr>
+                <td>12:00 A.M.</td>
+                <td>12:15 P.M.</td>
+                <td>12:30 P.M.</td>
+            </tr>
+            <tr>
+                <td>01:00 P.M.</td>
+                <td>1:15 P.M.</td>
+                <td>01:30 P.M.</td>
+            </tr>
+            <tr>
+                <td>02:00 P.M.</td>
+                <td>2:15 P.M.</td>
+                <td>02:30 P.M.</td>
+            </tr>
+            <tr>
+                <td>03:00 P.M.</td>
+                <td>03:15 P.M.</td>
+                <td>03:30 P.M.</td>
+            </tr>
+        </table>
+    </div>
+    <div class="h">
+        <h2 style="color: white;text-align: center;"> Metro bus-Plate No-:T981134</h2>
+        <h2 style="color: crimson;text-align: center;"> Driver Details:Farid:056-2926386</h2>
+        <h2 style="color: white;text-align: center;">CUD Bus</h2>
+        <h2 style="color: rgb(243, 247, 230);text-align: center;">Route:Citywalk-AI Bada's Campus-Dubai Mall Metro station</h2>
+        <table>
+            <tr>
+
+                <th>Dubai Mall Metro Station</th>
+
+                <th>AI Bada's Campus</th>
+                <th>City walk</th>
+
+            </tr>
+            <tr>
+                <td>8:00 A.M.</td>
+                <td>8:15 A.M.</td>
+                <td>08:30 A.M.</td>
+            </tr>
+            <tr>
+                <td>09:00 A.M.</td>
+                <td>9:15 A.M.</td>
+                <td>09:30 A.M.</td>
+            </tr>
+            <tr>
+                <td>10:00 A.M.</td>
+                <td>10:15 A.M.</td>
+                <td>10:30 A.M.</td>
+            </tr>
+            <tr>
+                <td>11:00 A.M.</td>
+                <td>11:15 A.M.</td>
+                <td>11:30 A.M.</td>
+            </tr>
+            <tr>
+                <td>12:00 A.M.</td>
+                <td>12:15 P.M.</td>
+                <td>12:30 P.M.</td>
+            </tr>
+            <tr>
+                <td>01:00 P.M.</td>
+                <td>1:15 P.M.</td>
+                <td>01:30 P.M.</td>
+            </tr>
+            <tr>
+                <td>02:00 P.M.</td>
+                <td>2:15 P.M.</td>
+                <td>02:30 P.M.</td>
+            </tr>
+            <tr>
+                <td>03:00 P.M.</td>
+                <td>03:15 P.M.</td>
+                <td>03:30 P.M.</td>
+            </tr>
+        </table>
+    </div>
+    <div class="H">
+        <h1>Pick up points</h1>
+        <h2><span style="color:crimson">>>></span> City Walk:Bus stop in front of Mitts and Trays</h2>
+        <h2><span style="color:crimson;">>>></span> Dubai Mall Metro station:Exit-2</h2>
+        <h2><span style="color:crimson">>>></span> AI Bada campus's Front entrance</h2>
+    </div>
+    <div class="hy">
+        <a href="#"><span style="color: white;"> GO TO TOP</span></a>
+    </div>
+</body>
+
+</html>

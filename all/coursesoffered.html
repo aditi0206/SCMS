@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses Offered</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        #pr {
+            height: 50px;
+            width: 20%;
+            margin-left: 30px;
+            font-size: 25px;
+            margin-top: 30px;
+            background-color: #f872c5;
+            border: 2px solid white;
+            border-style: dotted;
+        }
+        
+        #in {
+            height: 51px;
+        }
+        
+        #l1 {
+            width: 60%;
+            height: 51px;
+            font-size: 20px;
+            background: linear-gradient(#40E0D0, #FF8C00);
+        }
+        
+        .language {
+            margin-top: 20px;
+            margin-left: 600px;
+            width: 30%;
+        }
+        
+        #l {
+            width: 60%;
+            height: 51px;
+            font-size: 20px;
+            background: linear-gradient(#ff8c00, #ff0080);
+        }
+        
+        .level {
+            margin-top: 20px;
+            margin-left: 1090px;
+            width: 30%;
+        }
+        
+        #Text {
+            margin: 0 auto;
+            font-family: Tahoma, Geneva, sans-serif;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        #Text span {
+            display: block;
+        }
+        
+        #Text span:nth-child(1) {
+            font-size: 4em;
+            color: #ffffff;
+            text-shadow: 0px 5px 0px #959691, 0px 7px 0px #959691, 0px 15px 0px #858383;
+            line-height: 0.85;
+        }
+        
+        #Text span:nth-child(2) {
+            font-family: Pacifico;
+            color: red;
+            text-shadow: 0px 2px 0px white;
+            font-size: 20px;
+            margin-left: 150px;
+            margin-top: -25px;
+            transform: rotate(-15deg);
+        }
+        
+        .container {
+            display: inline-flex;
+        }
+        
+        .parts {
+            width: 400px;
+            height: 660px;
+            overflow: hidden;
+            margin-bottom: 10px;
+            text-align: justify;
+            padding: 15px;
+            margin-left: 80px;
+            background-color: rgb(22, 162, 167);
+            margin-top: 100px;
+            border: 4px solid white;
+            border-style: dotted;
+        }
+        
+        .parts:hover {
+            background: linear-gradient(#12c2e9, #c471ed, #f64f59);
+            box-shadow: 8px 5px 5px 8px rgb(186, 6, 192);
+        }
+        
+        .parts1:hover {
+            background: linear-gradient(#009FFF, #ec2F4B);
+            box-shadow: 8px 5px 5px 8px rgb(186, 6, 192);
+        }
+        
+        #firstpart {
+            width: 600px;
+            height: 430px;
+            border: 2px solid white;
+            margin-bottom: 10px;
+            text-align: justify;
+            padding: 10px;
+            background-color: white;
+        }
+        
+        #secondpart {
+            width: 600px;
+            height: 430px;
+            border: 2px solid white;
+            margin-bottom: 10px;
+            text-align: justify;
+            overflow: hidden;
+            padding: 10px;
+            background-color: white;
+        }
+        
+        #thirdpart {
+            width: 600px;
+            height: 430px;
+            border: 2px solid white;
+            margin-bottom: 10px;
+            text-align: justify;
+            overflow: hidden;
+            padding: 10px;
+            background-color: white;
+        }
+        
+        .container2 {
+            display: inline-flex;
+        }
+        
+        .parts1 {
+            width: 400px;
+            height: 670px;
+            overflow: hidden;
+            margin-bottom: 10px;
+            text-align: justify;
+            padding: 10px;
+            margin-left: 80px;
+            background-color: rgb(22, 162, 167);
+            margin-top: 100px;
+            border: 4px solid white;
+            border-style: dotted;
+        }
+        
+        #fourthpart {
+            width: 600px;
+            height: 430px;
+            border: 2px solid white;
+            margin-bottom: 10px;
+            text-align: justify;
+            padding: 10px;
+            background-color: white;
+        }
+        
+        #fifthpart {
+            width: 600px;
+            height: 430px;
+            border: 2px solid white;
+            margin-bottom: 10px;
+            text-align: justify;
+            overflow: hidden;
+            padding: 10px;
+            background-color: white;
+        }
+        
+        #sixthpart {
+            width: 600px;
+            height: 430px;
+            border: 2px solid white;
+            margin-bottom: 10px;
+            text-align: justify;
+            overflow: hidden;
+            padding: 10px;
+            background-color: white;
+        }
+        
+        .parts1 img {
+            width: 410px;
+            height: 270px;
+            padding: 2px;
+            margin-left: -19px;
+            margin-top: -18px;
+        }
+        
+        .parts img {
+            width: 410px;
+            height: 270px;
+            padding: 2px;
+            margin-left: -19px;
+            margin-top: -18px;
+        }
+        
+        #quick {
+            background-color: rgb(30, 30, 163);
+            font-weight: bold;
+            padding: 5px;
+        }
+        
+        #quick a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .quick:hover {
+            background-color: rgb(165, 165, 243);
+        }
+        
+        .end {
+            margin-left: 20px;
+            font-size: 20px;
+            border-top: 1px solid rgb(231, 230, 230);
+        }
+    </style>
+</head>
+
+<body style="background-image:url('./images/sparkle.jpg');background-position:center;background-size:cover">
+    <div id="Text">
+        <span style="margin-top: 10px;">COURSES OFFERED</span>
+    </div>
+    <input type="text" name="pro" id="pr" placeholder="Search">
+    <div class="language">
+        <select name="level" id="l1">
+            <option value="" disabled selected >Language </option>
+            <option value="English">English</option>
+            <option value="Hindi">Hindi</option>
+            <option value="Arabic">Arabic</option>
+            <option value="French"> French</option>
+        <option value="German"> German</option>
+       </select>
+
+    </div>
+
+    <div class="level">
+        <select name="level" id="l">
+            <option value="" disabled selected>Program Level</option>
+            <option value="undergraduate"> Undergraduate</option>
+            <option value="graduate"> Graduate</option>
+            <option value="masters">Masters</option>
+       </select>
+    </div><br><br>
+    <div class="banner">
+        <img src="./images/online-education-application-learning-worldwide-on-computer-mobile-website-background-social-distance-concept-the-classroom-training-course-library-ill.jpg" width=" 98%" height="700" style="margin-left: 10px;box-shadow:5px 5px 5px 5px black">
+    </div>
+    <div class="container">
+        <div class="parts " id="firstpart ">
+            <div class="image-heading ">
+                <img src="./images/a1.png" />
+            </div>
+            <h3 style="text-align: center; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size:20px;margin-top:10px;background-color:rgb(204, 16, 47);padding:5px;border:3px solid white;border-style:dotted">Bachelor Of Architecture</h3><br>
+            <!-- <pre style="font-size:20px"><span style="border:2px solid black;border-radius:5px" id="quick"><a href="#quickl">Quick Info</a></span></pre> -->
+
+
+            <p style="font-size:20px;text-shadow:3px 3px 3px blue">The Bachelor of Architecture is a 5-year terminal degree program, that will enable you to fulfil local professional registration.</p>
+            <br><br>
+            <div class="quickl">
+                <pre style="font-size:18px;text-shadow:5px 5px 5px  rgb(248, 107, 130)"><i class="fa fa-star"></i> Bachelor Degree Program </pre>
+                <br> <pre style="font-size:18px;text-shadow:5px 5px 5px  rgb(248, 107, 130)"><i class="fa fa-calendar"></i>5Years(10 Semesters)</pre>
+                <br><pre style="font-size:18px;text-shadow:5px 5px 5px  rgb(248, 107, 130)"><i class="fa fa-clock-o"></i>170 credit Hours</pre><br>
+                <pre style="font-size:18px;text-shadow:5px 5px 5px  rgb(248, 107, 130)"><i class="fa fa-calendar-o"></i>Fall, Spring and summer Semesters</pre>
+            </div>
+
+
+
+        </div>
+
+
+        <div class="parts " id="secondpart ">
+            <div class="image-heading ">
+                <img src="./images/a3.jpg" />
+            </div>
+            <h3 style="text-align: center; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size:20px;margin-top:10px;background-color:rgb(204, 16, 47);padding:5px;border:3px solid white;border-style:dotted">Bachelor Of Science In Computer Science</h3><br>
+            <p style="font-size:20px;text-shadow:3px 3px 3px yellow">Canadian University Dubai’s Bachelor of Science in Computer Science has been designed to provide students with a solid foundation in Computer Science and Computing Mathematics. </p>
+            <br>
+            <div class="quickl">
+                <pre style="font-size:18px;text-shadow:5px 5px 5px  rgb(248, 107, 130)"><i class="fa fa-star"></i> Bachelor Degree Program </pre>
+                <br> <pre style="font-size:18px;text-shadow:5px 5px 5px  rgb(248, 107, 130)"><i class="fa fa-calendar"></i>4 Years (8 Semesters)</pre>
+                <br><pre style="font-size:18px;text-shadow:5px 5px 5px  rgb(248, 107, 130)"><i class="fa fa-clock-o"></i> 124 Credit Hours</pre><br>
+                <pre style="font-size:18px;text-shadow:5px 5px 5px  rgb(248, 107, 130)"><i class="fa fa-calendar-o"></i>Fall, Spring and summer Semesters</pre>
+            </div>
+        </div>
+
+        <div class="parts " id="thirdpart ">
+            <div class="image-heading ">
+                <img src="./images/a3.png" />
+            </div>
+            <h3 style="text-align: center; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size:20px;margin-top:10px;background-color:rgb(204, 16, 47);padding:5px;border:3px solid white;border-style:dotted">Bachelor Of Science In Cyber Security</h3><br>
+            <p style="font-size:20px;text-shadow:3px 3px 3px rgb(194, 255, 192)">The Bachelor of Science in Cyber Security program will prepare students for careers in the network security industry. The curriculum includes combined core topics in the realm of computing and cyber security.</p>
+            <br>
+            <div class="quickl">
+                <pre style="font-size:18px;text-shadow:5px 5px 5px  rgb(248, 107, 130)"><i class="fa fa-star"></i> Bachelor Degree Program </pre>
+                <br> <pre style="font-size:18px;text-shadow:5px 5px 5px  rgb(248, 107, 130)"><i class="fa fa-calendar"></i>4 Years (8 Semesters)</pre>
+                <br><pre style="font-size:18px;text-shadow:5px 5px 5px  rgb(248, 107, 130)"><i class="fa fa-clock-o"></i> 124 Credit Hours</pre><br>
+                <pre style="font-size:18px;text-shadow:5px 5px 5px  rgb(248, 107, 130)"><i class="fa fa-calendar-o"></i>Fall, Spring and summer Semesters</pre>
+            </div>
+        </div>
+    </div>
+    <div class="container2">
+        <div class="parts1 " id="fourthpart ">
+            <div class="image-heading ">
+                <img src="./images/a4.jpg" />
+            </div>
+            <h3 style="text-align: center; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size:20px;margin-top:10px;background-color:rgb(204, 16, 47);padding:5px;border:3px solid white;border-style:dotted">Bachelor Of Science In Electrical Engineering</h3><br>
+            <p style="font-size:20px;text-shadow:3px 3px 3px red">The Bachelor of Science in Electrical Engineering – Electronics program will provide you with the knowledge, techniques and skills needed by the next generation of engineers.</p>
+            <br>
+            <div class="quickl">
+                <pre style="font-size:18px;text-shadow:5px 5px 5px  rgb(248, 107, 130)"><i class="fa fa-star"></i> Bachelor Degree Program </pre>
+                <br> <pre style="font-size:18px;text-shadow:5px 5px 5px  rgb(248, 107, 130)"><i class="fa fa-calendar"></i>4 Years (8 Semesters)</pre>
+                <br><pre style="font-size:18px;text-shadow:5px 5px 5px  rgb(248, 107, 130)"><i class="fa fa-clock-o"></i> 138 Credit Hours</pre><br>
+                <pre style="font-size:18px;text-shadow:5px 5px 5px  rgb(248, 107, 130)"><i class="fa fa-calendar-o"></i>Fall, Spring and summer Semesters</pre>
+            </div>
+
+        </div>
+
+        <div class="parts1 " id="fifthpart ">
+            <div class="image-heading ">
+                <img src="./images/a5.jpeg" />
+            </div>
+            <h3 style="text-align: center; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size:20px;margin-top:10px;background-color:rgb(204, 16, 47);padding:5px;border:3px solid white;border-style:dotted">Bachelor Of Science In Software Design</h3><br>
+            <p style="font-size:20px;text-shadow:3px 3px 3px rgb(255, 123, 0)">The Software Design program offers Canadian University Dubai students a specialist degree in the art and science of computer software design, architecture, analysis and evolution.</p>
+            <br><br>
+            <div class="quickl">
+                <pre style="font-size:18px;text-shadow:5px 5px 5px  rgb(248, 107, 130)"><i class="fa fa-star"></i> Bachelor Degree Program </pre>
+                <br> <pre style="font-size:18px;text-shadow:5px 5px 5px  rgb(248, 107, 130)"><i class="fa fa-calendar"></i>4 Years (8 Semesters)</pre>
+                <br><pre style="font-size:18px;text-shadow:5px 5px 5px  rgb(248, 107, 130)"><i class="fa fa-clock-o"></i> 125 Credit Hours</pre><br>
+                <pre style="font-size:18px;text-shadow:5px 5px 5px  rgb(248, 107, 130)"><i class="fa fa-calendar-o"></i>Fall, Spring and summer Semesters</pre>
+            </div>
+
+        </div>
+
+        <div class="parts1 " id="sixthpart ">
+            <div class="image-heading ">
+                <img src="./images/transport.jpeg" />
+            </div>
+            <h3 style="text-align: center; font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;font-size:20px;margin-top:10px;background-color:rgb(204, 16, 47);padding:5px;border:3px solid white;border-style:dotted">Master Of Business Administration in Marketing</h3><br>
+            <p style="font-size:20px;text-shadow:3px 3px 3px rgb(255, 38, 0)">The MBA Marketing concentration has been designed to enhance your marketing analytical skills to adapt to the increasingly dynamic and competitive business environment. The courses will equip you with an advanced understanding of marketing
+                challenges to effectively plan, develop and implement appropriate marketing strategies. The case study based discussions in class will train you to investigate how companies access the market and apply marketing processes to achieve competitive
+                advantage.
+            </p>
+            <br><br>
+            <div class="quickl">
+                <pre style="font-size:18px;text-shadow:5px 5px 5px  rgb(248, 107, 130)"><i class="fa fa-star"></i> Bachelor Degree Program </pre>
+                <br> <pre style="font-size:18px;text-shadow:5px 5px 5px  rgb(248, 107, 130)"><i class="fa fa-calendar"></i>4 Years (8 Semesters)</pre>
+                <br><pre style="font-size:18px;text-shadow:5px 5px 5px  rgb(248, 107, 130)"><i class="fa fa-clock-o"></i> 125 Credit Hours</pre><br>
+                <pre style="font-size:18px;text-shadow:5px 5px 5px  rgb(248, 107, 130)"><i class="fa fa-calendar-o"></i>Fall, Spring and summer Semesters</pre>
+            </div>
+
+        </div>
+
+
+    </div>
+    <br><br>
+    <div class="end">
+        <h2 style="color:white;font-family:cursive;margin-top:20px"><b>Arabic Programs (عربي)</b></h2><br>
+        <p style="color:rgb(212, 8, 8);font-family:cursive"><i class="fa fa-star"></i><b> Bachelor of Arts in Psychology.</b> <br><br><i class="fa fa-star"></i> <b>Bachelor of Arts in Applied Sociology.</b></p>
+
+    </div>
+    <br><br>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="icon" href="./images/mono.jpg" type=" icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            width: 100%;
+            background: #001923;
+        }
+        
+        section::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(#ffeb3b, #d1196f);
+            border-radius: 50%;
+            transform: translate(-450px, -460px);
+        }
+        
+        section::after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(#2196f3, #9ec9dd);
+            border-radius: 50%;
+            transform: translate(500px, -110px);
+        }
+        
+        .container {
+            position: relative;
+            width: 100%;
+            z-index: 1000;
+            max-width: 1000px;
+            padding: 50px;
+            background: rgba(117, 116, 116, 0.1);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgb(255, 255, 255, 0.25);
+            border-right: 1px solid #ffffff3d;
+            border-bottom: 1px solid rgb(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(25px);
+        }
+        
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            pointer-events: none;
+            transform: skewX(-35deg);
+        }
+        
+        .container h2 {
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .container .row100 {
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(minmax(250px, 1fr));
+        }
+        
+        .container .row100 .col {
+            position: relative;
+            width: 100%;
+            padding: 0 10px;
+            margin: 30px 0 20px;
+        }
+        
+        .container .row100 .col {
+            position: relative;
+            width: 100%;
+            height: 40px;
+            color: #fff;
+        }
+        
+        .container .row100 .col .inputBox input,
+        .container .row100 .col .inputBox textarea {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            box-shadow: none;
+            border: none;
+            outline: none;
+            font-size: 15px;
+            padding: 0 10px;
+            z-index: 1;
+            color: #000;
+        }
+        
+        .container .row100 .col .inputBox .text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            line-height: 40px;
+            font-size: 18px;
+            padding: 0 10px;
+            display: block;
+            transition: 0.5s;
+            pointer-events: none;
+        }
+        
+        .container .row100 .col .inputBox input:focus+.text,
+        .container .row100 .col .inputBox input:valid+.text,
+        .container .row100 .col .inputBox textarea:focus+.text,
+        .container .row100 .col .inputBox textarea:valid+.text {
+            top: -35px;
+            left: -10px;
+        }
+        
+        .container .row100 .col .inputBox .line {
+            position: absolute;
+            bottom: 0;
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: #fff;
+            transition: 0.5s;
+            border-radius: 2px;
+            pointer-events: none;
+        }
+        
+        .container .row100 .col .inputBox input:focus~.line,
+        .container .row100 .col .inputBox input:valid~.line {
+            height: 100%;
+        }
+        
+        .container .row100 .col .inputBox .textarea {
+            position: relative;
+            width: 100%;
+            height: 100px;
+            padding: 20px 0;
+            margin-bottom: 5px;
+        }
+        
+        .container .row100 .col .inputBox textarea:focus~.line,
+        .container .row100 .col .inputBox textarea:valid~.line {
+            height: 100%;
+        }
+        
+        .container .row100 .col .input input[type="submit"] {
+            border: none;
+            padding: 10px 40px;
+            cursor: pointer;
+            outline: none;
+            font-weight: 600;
+            font-size: 18px;
+            border-radius: 2px;
+        }
+        
+        .ball {
+            width: 80px;
+            height: 80px;
+            background-image: linear-gradient( white 10%, purple 90%);
+            border-radius: 50%;
+            border: 3.5px solid rgb(227, 228, 235);
+            animation: bounce 5s linear infinite;
+            box-shadow: #fff;
+        }
+        
+        @keyframes bounce {
+            0% {
+                transform: scaleX(360deg);
+            }
+            40% {
+                transform: skewY(-360deg);
+            }
+            50% {
+                transform: translateX(800px);
+            }
+        }
+        
+        .content {
+            color: white;
+            margin-top: 80px;
+            text-align: center;
+        }
+        
+        .content a {
+            color: rgb(186, 213, 229);
+        }
+        
+        .h1 {
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .H {
+            border: 3px solid white;
+            padding-bottom: 20px;
+            border-radius: 10px;
+            width: 800px;
+            height: 500px;
+            background-image: linear-gradient( rgb(172, 128, 128) 10%, rgb(54, 2, 54) 90%);
+            box-shadow: tomato;
+            margin-top: 10px;
+            margin-left: 45px;
+        }
+        
+        .dots {
+            color: white;
+            height: 80px;
+            width: 80px;
+            text-align: center;
+            margin-left: 300px;
+            margin-top: 30px;
+            animation: dots 3s linear infinite;
+        }
+        
+        body {
+            color: rgb(248, 207, 248);
+            font: 100% Lato, Arial, Sans Serif;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        
+        #Text {
+            margin: 0 auto;
+            font-family: Tahoma, Geneva, sans-serif;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        #Text span {
+            display: block;
+        }
+        
+        #Text span:nth-child(1) {
+            font-size: 4em;
+            color: #ffffff;
+            text-shadow: 0px 5px 0px #959691, 0px 5px 0px #959691, 0px 9px 0px #858383;
+            line-height: 0.85;
+        }
+        
+        #Text span:nth-child(2) {
+            font-family: Pacifico;
+            color: red;
+            text-shadow: 0px 2px 0px white;
+            font-size: 20px;
+            margin-left: 150px;
+            margin-top: -25px;
+            transform: rotate(-15deg);
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="ball">
+                <p style="text-align: center;margin-top: 8px;font-size: 34px;color: black;">HI....</p>
+            </div>
+            <div class="ball2"></div>
+            <div class="bounce"></div>
+            <div id="Text">
+                <span style="margin-top: 10px;">CONTACT US FROM</span>
+            </div>
+
+
+            <div class="row100">
+                <div class="col">
+                    <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span class="text">First Name</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span class="text">Last Name</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row100">
+                <div class="col">
+                    <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span class="text">Email</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="inputBox">
+                        <input type="text" name="" required="required">
+                        <span class="text">Mobile</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row100">
+                <div class="col">
+                    <div class="inputBox textarea">
+                        <textarea required="required"></textarea>
+                        <span class="text">Type Your Message Here.....</span>
+                        <span class="line"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row100">
+                <div class="col">
+                    <input type="submit" value="SEND" style="font-size: 30px;padding: 5px;color: #fff;background-color: RED;border-radius:10px;box-shadow:4px 4px 4px rgb(163, 6, 6) ">
+
+                </div>
+            </div>
+            <div class="H">
+                <div class="content">
+                    <h3> Admissions questions:see the undergraduate admissions site or contact:</h3>
+                    <a href="./ucinfo@ucapplication.net">CLICK HERE</a>
+                    <br><br>
+                    <h3>President Michael V.Drake: <a href="president@ucop.edu"> CLICK HERE</a> to request President Drake's participation in an event or meeting please complete the president form
+                        <a href="./here"></a>
+                    </h3><br><br>
+                    <h3>Website questions/feedback:contact<a href="webeditor@ucop.edu">CLICK HERE</a></h3>
+                    <div class="h1">
+                        <h1>GENERAL INQUIRIES</h1>
+                        <h3>Phone:1-877-431-6887</h3>
+                        <a href="./info@ucanwest.ca">Email:info@ucanwest.ca</a>
+                        <h1>PROSPECTIVE STUDENTS</h1>
+                        <h3>Phone:1-877-431-6887</h3>
+                        <a href="./enquiry@ucanwest.ca">Email:enquiry@ucanwest.ca</a>
+                        <h1>CURRENT STUDENTS</h1>
+                        <h3>Phone:1-877-431-6887</h3>
+                        <a href="./student.affairs@ucanwest.ca">Email:student.affairs@ucanwest.ca</a>
+                        <h1 class="dots">...............................</h1>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</body>
+
+</html>

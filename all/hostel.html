@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HOSTEL PAGE</title>
+    <link rel="icon" href="./images/mono.jpg" type=" icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: wheat;
+        }
+        
+        header {
+            background-color: rgb(49, 49, 187);
+            color: white;
+            line-height: 80px;
+            display: flex;
+            background: linear-gradient(to right, #000046, #1CB5E0);
+        }
+        
+        header img {
+            margin-right: 20px;
+        }
+        
+        .hed ul {
+            display: inline-flex;
+            list-style: none;
+            line-height: 30px;
+            margin-left: 300px;
+        }
+        
+        .hed ul li a {
+            color: white;
+            padding: 10px;
+            font-size: 25px;
+            margin-left: 100px;
+        }
+        
+        .banner {
+            background-image: url("./images/ss1.PNG");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 80vh;
+            margin-top: 5px;
+            border-radius: 30px;
+            border: 2px solid black;
+            margin-left: 10px;
+            box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.801);
+        }
+        
+        .h ul {
+            display: inline-flex;
+            list-style: none;
+            border-bottom: 3px solid lightgrey;
+            width: 90%;
+            margin-left: 30px;
+        }
+        
+        .h ul li {
+            font-size: 30px;
+            color: white;
+            padding: 20px;
+            line-height: 30px;
+            margin-left: 30px;
+        }
+        
+        .h ul li:hover {
+            background-color: goldenrod;
+        }
+        
+        .cards1 {
+            width: 85%;
+            height: 500px;
+            overflow: hidden;
+            border: 4px solid white;
+            margin-bottom: 40px;
+            text-align: justify;
+            padding: 5px;
+            margin-left: 10px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.445);
+        }
+        
+        .cards1:hover {
+            box-shadow: 10px 10px 10px 10px rgb(240, 77, 104);
+        }
+        
+        .cards1>p {
+            margin-left: 30px;
+        }
+        
+        .cards>h3 {
+            color: white;
+        }
+        
+        .cards2 {
+            width: 85%;
+            height: 500px;
+            overflow: hidden;
+            border: 4px solid white;
+            margin-bottom: 40px;
+            text-align: justify;
+            border-radius: 10px;
+            background-color: white;
+            float: right;
+            box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.445);
+        }
+        
+        .cards2:hover {
+            box-shadow: 10px 10px 10px 10px rgb(240, 77, 104);
+        }
+        
+        .cards3 {
+            width: 85%;
+            height: 500px;
+            overflow: hidden;
+            border: 4px solid white;
+            margin-bottom: 40px;
+            text-align: justify;
+            padding: 5px;
+            margin-left: 10px;
+            border-radius: 10px;
+            background-color: white;
+            margin-top: 40px;
+            box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.445);
+        }
+        
+        .cards3:hover {
+            box-shadow: 10px 10px 10px 10px rgb(240, 77, 104);
+        }
+        
+        .amenity {
+            margin-left: 30px;
+            font-size: 20px;
+            border-top: 2px solid lightgrey;
+        }
+        
+        .bills {
+            font-size: 20px;
+            border-top: 2px solid lightgrey;
+        }
+        
+        #pic1 {
+            float: left;
+            margin-right: 30px;
+            box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.733);
+        }
+        
+        #pic2 {
+            float: right;
+            box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.733);
+        }
+        
+        #button {
+            font-size: 20px;
+            float: right;
+            padding: 10px;
+            margin-top: -60px;
+            margin-right: 90px;
+            background-color: red;
+            border-radius: 10px;
+            box-shadow: 3px 3px 3px red;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        
+        #button:hover {
+            background: linear-gradient(to left, #1E9600, #FFF200, #eb3030, white);
+            transition: 3s;
+        }
+        
+        .pay {
+            width: 300px;
+            height: 400px;
+            margin-left: 80px;
+            font-size: 19px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        
+        .cancel {
+            width: 300px;
+            height: 400px;
+            font-size: 19px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin-left: 40%;
+            margin-top: -26%;
+        }
+        
+        .love {
+            width: 300px;
+            height: 400px;
+            font-size: 19px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin-left: 70%;
+            margin-top: -26%;
+        }
+        
+        .c1 {
+            width: 150px;
+            height: 40px;
+            border: 2px solid black;
+            display: inline-flex;
+            margin-right: 20px;
+            padding: 5px;
+            background-color: blue;
+            transition: 0.7s;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        
+        .c1 a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .c1:hover {
+            background-color: rgb(113, 209, 241);
+        }
+        
+        .c2 {
+            width: 250px;
+            height: 40px;
+            border: 2px solid black;
+            display: inline-flex;
+            margin-right: 20px;
+            padding: 5px;
+            background-color: blue;
+            transition: 0.7s;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-decoration: none;
+        }
+        
+        .c2 a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .c2:hover {
+            background-color: rgb(113, 209, 241);
+        }
+        
+        .c3 {
+            width: 250px;
+            height: 40px;
+            border: 2px solid black;
+            display: inline-flex;
+            padding: 5px;
+            background-color: blue;
+            transition: 0.7s;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        
+        .c3 a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .c3:hover {
+            background-color: rgb(113, 209, 241);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="./images/ssof logo.png" width="70" height="70" style="margin-left:100px">
+            <h2>HOSTEL PORTAL</h2>
+            <div class="hed">
+                <ul>
+                    <li><a href="#"><i class="fa fa-cogs" style="margin-right: 15px;" ></i>Services</a></li>
+                    <li><a href="#"><i class="fa fa-user-circle-o" style="margin-right: 15px;" ></i>About</a></li>
+                    <li><a href="./hostellogin.html" target="_blank"><i class="fa fa-sign-in" style="margin-right: 15px;"></i>Login</a></li>
+                </ul>
+            </div>
+
+        </header>
+        <main>
+
+            <!-- <a href="./hostellogin.html">HOSTEL LOGIN</a> -->
+        </main>
+        <div class="banner" id="id1">
+
+        </div><br>
+        <div class="h">
+            <ul>
+                <li><a href="#" style="margin-right: 50px;text-decoration:none"> Overview</a></li>
+                <li><a href="#room" style="margin-right: 50px;text-decoration:none">Room Types</a></li>
+                <li><a href="#p" style="margin-right: 50px;text-decoration:none">Payment Info</a></li>
+
+
+            </ul>
+        </div>
+
+        <br><br><br><br>
+        <h1 style="margin-left: 30px;text-shadow:4px 4px 4px #eb3030"><u>Canadian University Hostel</u></h1><br>
+        <p style="text-align: justify;font-size:20px;margin-left: 30px;color:#be1e1eee; ">Accommodation is always a matter of concern for anyone who wishes to study abroad and although there are a lot of options out there, it is sometimes difficult to find one that you are comfortable staying in. On campus accommodation in universities
+            is the best option out there however since there is a limit to how many students a university can accommodate, homestays and off campus options are necessary. Dubai is a cosmopolitan metropolis. A vibrant, forward-thinking city with much to
+            offer. As one of the most compelling places in the Middle East, it has become the preferred regional headquarters for expatriates from across the globe, as well as a regional leader in both culture and tourism. Its diverse economic landscape
+            has created space for technological innovation and development, generating an array of employment opportunities in several fields including: finance, aviation, education, and trade. <br><br> Canadian University Dubai (CUD) offers students
+            the chance to immerse themselves in this cultural paradise, providing an international academic experience in the heart of Dubai. At CUD, we understand that your university experience extends beyond our campuses. This is why we work with our
+            students to find suitable accommodation to meet their needs and expectations. Each of our students have different requirements for housing, and our aim is to assist you with finding a comfortable living environment that has all the amenities
+            you need to be successful. The different types of student accommodation are there that you can get.</p><br><br>
+
+
+
+        <div class="amenity ">
+            <h3 style="margin-top:30px;">Amenities</h3><br>
+            <p><img src="./images/black-sofa-icon-isolated-on-260nw-1453502171.jpg " height="20 " width="30 "> Furniture <span style="padding:100px "> <i class="fa fa-car " style="margin-right: 15px; "></i>Car-Parking</span><span style="padding:50px
+            "><i class="fa fa-users " style="margin-right: 15px; "></i>Support Team</span><br><br>
+                <img src="./images/laundry.jpg " width="30 " height="30 "> Laundry
+                <span style="padding:105px "><img src="./images/19263737-gym-icon-bodybuilder.jpg " width="30 " height="30 " style="margin-right: 10px;margin-bottom:-5px "> Gym</span><span style="padding:90px "><img src="./images/1210199.png
+            " width="30 " height="30 " style="margin-right: 10px;margin-bottom:-5px "> Roof-Top</span><br><br>
+                <img src="./images/3050196.png " height="40 " width="40 " style="margin-left:-10px "> Study Room
+                <span style="padding:75px "><img src="./images/swimming.png " height="40 " width="40 " style="margin-bottom: -10px; "> Swimming Pool</span><span style="padding:42px "><img src="./images/shuttle.png " height="40 " width="40 " style="margin-left:
+            -20px;margin-right:5px "> Shuttle-Service</span><br><br>
+                <img src="./images/cafe.png " height="40 " width="40 " style="margin-left: -10px; margin-right:5px "> Cafe</p>
+            <br><br>
+
+            <div class="bills">
+                <h3 style="margin-top:30px;">Your Bills</h3>
+                <p><img src="./images/gas-stove-3242409-2716033.png " height="40 " width="40 " style="margin-bottom: -15px;margin-right:5px;margin-left:-15px"> Gas Included <span style="padding:100px "> <img src="./images/2-22573_tap-png-tap-water-icon-free-transparent-png.png" width="35" height="35">  Water Included</span>
+                    <img src="./images/electricity-4507838_1280.png" width="30 " height="30 " style="margin-right:10px;margin-bottom:-9px;margin-left:-15px">Electricity Included<span style="padding:105px "><br><br><img src="./images/wifi.jpg" width="40 " height="30 " style="margin-right: 5px;margin-bottom:-5px;margin-left:-15px "> WIFI</span>
+                    <span style="padding:90px "><img src="./images/secure.png" width="40 " height="35 " style="margin-right: 10px;margin-bottom:-5px;margin-left:-30px "> Secure Door Entry</span><br><br>
+                </p>
+            </div>
+            <br><br>
+
+
+            <h3><u> TYPES OF ROOMS </u></h3><br>
+            <div class="c1" id=room>
+                <a href="#dorm"> DORMITORY</a>
+            </div>
+            <div class="c2">
+                <a href="#twin"> Twin En-Suite Room</a>
+            </div>
+            <div class="c3">
+                <a href="#single"> Single Standard En-suite</a>
+            </div>
+
+            <div class="cards1 ">
+                <img src="./images/dorm.jpg" width="600" height="290" id="pic1" />
+                <!-- <p>One of the or the most affordable option for students in Canada is dormitories. Almost all the universities in Canada have dormitories in or around the campus and since these dormitories usually come with all the facilities</p> -->
+                <h3 id="dorm">DORMITORY </h3><br>
+                <pre><img src="./images/gas-stove-3242409-2716033.png " height="40 " width="40 " style="margin-bottom: -15px;"/> Kitchen   <img src="./images/2-22573_tap-png-tap-water-icon-free-transparent-png.png" width="25" height="25" style="margin-right:15px">Washrooms and Laundry  <img src="./images/meal.jpg" height="40 " width="40 " style="margin-bottom: -15px;margin-right:5px"/>Meal Plans   </pre>
+                <br><br>
+                <p>1.One can choose between an individual or a shared room.<br>
+                    <br> 2.the dormitories are separated by gender.<br><br> 3.These are located in or around the campus, it is easier for the students to interact with each other and participate in activities conducted by the university.
+                </p>
+                <br><br>
+                <hr style="margin-bottom: 2px;">
+                <pre style="margin-top:50px;margin-left:70px;text-shadow:1px 1px 1px rgb(126, 126, 252)"><b>COST:    $3,000 to $7,500 Canadian Dollars per year.</b></pre><br>
+                <pre style="margin-left:60px;text-shadow:1px 1px 1px rgb(126, 126, 247)"><b> Rating:  <i class="fa fa-star" style="color:yellow"></i> <i class="fa fa-star" style="color:yellow"></i> <i class="fa fa-star" style="color:yellow"></i> <i class="fa fa-star-half-o" style="color:yellow"></i> <i class="fa fa-star-o" style="color:yellow"></i></b></pre>
+                <a href=""><span style="border:2px solid red;background-color:red;text-decoration:none;color:white;box-shadow:4px 4px 4px black;float:right;margin-right:90px;margin-top:-50px;padding:10px;border-radius:10px;" id="button" >BOOK NOW</span></a>
+
+            </div>
+
+            <div class="cards2 ">
+                <img src="./images/besthost.jpg" width="600" height="290" id="pic2" />
+                <h3 id="twin">Twin En-Suite Room</h3><br><br>
+                <pre><i class="fa fa-shower" style="font-size: 18px;"></i><span style="font-size:18px"> Bathroom and shower </span>   <i class="fa fa-book" style="font-size: 18px;"></i><span style="font-size:18px">Study Table And Chair</span>   <i class="fa fa-cutlery"></i><span style="font-size:18px">Meal Plans</span>   </pre>
+                <br><br>
+                <p>1. Comes with a comfortable single bed. <br><br>2. Includes a modern en-suite bathroom and shared kitchen/lounge. <br><br>3. Features wide desks, study chairs, wardrobes, plenty of smart storage space and lockable drawer.</p>
+                <br><br>
+                <hr style="margin-bottom: 2px;margin-bottom:30px">
+                <span style="font-size:20px;">
+                    <pre>  Stay Duration            Move                   Price             Total</pre>
+                <br>
+                <pre >  12 months         Flexible check-in/out       2000AED/month       AED24000.00</pre>
+
+                </span>
+                <a href=""><span style="border:2px solid red;background-color:red;text-decoration:none;color:white;box-shadow:4px 4px 4px black;float:right;margin-right:90px;margin-top:-50px;padding:10px;border-radius:10px;"id="button">BOOK NOW</span></a>
+
+            </div>
+            <div class="cards3">
+                <img src="./images/Opal_1_Dundee_Student_Accommodation_Deluxe_Room.jpg" width="600" height="290" id="pic1" id="pic3" />
+                <h3 id="single">Single Standard En-suite</h3> <br> <br>
+                <pre><i class="fa fa-shower" style="font-size: 18px;"></i><span style="font-size:18px">  Bathroom and Shower </span>   <i class="fa fa-book" style="font-size: 18px;"></i><span style="font-size:18px">Study Table And Chair</span>   <i class="fa fa-wifi"></i><span style="font-size:18px"> Wi-fi</span>   </pre>
+                <br><br>
+                <p>1. Comes with a comfortable single bed. <br><br>2. Includes a modern en-suite bathroom and shared kitchen/lounge. <br><br>3. Features wide desks, study chairs, wardrobes, plenty of smart storage space and lockable drawer.</p>
+                <br><br>
+                <hr style="margin-bottom: 2px;margin-bottom:30px">
+                <span style="font-size:20px;">
+                    <pre>  Stay Duration            Move                   Price             Total</pre>
+                <br>
+                <pre >  12 months         Flexible check-in/out       3000AED/month       AED36000.00</pre>
+
+                </span>
+                <a href=""><span style="border:2px solid red;background-color:red;text-decoration:none;color:white;float:right;margin-right:90px;margin-top:-50px;padding:10px;border-radius:10px;box-shadow:4px 4px 4px black" id="button">BOOK NOW</span></a>
+
+
+            </div>
+
+
+        </div>
+        <div class="pay" id="p">
+            <h3 style="margin-bottom:-20px">Payment Info</h3><br><br>
+            <p>1. The listed prices are per person, per month. <br><br> 2. The rent is paid in cash(USD/AED), via credit /debit cards, Bank transfer or online payment through the student portal. <br><br> 3. The rent may be paid either in full or in bi-monthly
+                or quarterly instalments. <br><br> 4. A security deposit of 2,500 AED must be paid in advance to make a booking. <br><br></p>
+        </div>
+
+        <div class="cancel">
+            <h3 style="margin-bottom:-20px">Cancellation Policy</h3><br><br>
+            <p> 1. No Visa No Pay and No Place No Pay.* <br><br> 2. For more details regarding the cancellation policy, please contact our booking expert team. <br><br></p>
+        </div>
+
+        <div class="love">
+            <h3>What We Love</h3><br><br>
+            <p>1. The listed prices are per person, per month. <br><br> 2. The rent is paid in cash(USD/AED), via credit /debit cards, Bank transfer or online payment through the student portal. <br><br> 3. The rent may be paid either in full or in bi-monthly
+                or quarterly instalments. <br><br> 4. A security deposit of 2,500 AED must be paid in advance to make a booking. <br><br></p>
+        </div>
+    </div>
+</body>
+
+</html>
