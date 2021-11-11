@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel login</title>
+    <link rel="icon" href="./images/mono.jpg" type=" icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-image: url('./images/h2.jpg');
+            background-position: center;
+            background-size: 100%;
+            height: 100vh;
+            background-repeat: no-repeat;
+        }
+        
+        .container {
+            justify-content: center;
+            align-items: center;
+            margin-left: 600px;
+            /*border: 10px solid black;*/
+            display: inline-block;
+            padding: 30px;
+            margin-top: 150px;
+            background: linear-gradient(to left, #cc2b5e, #753a88, #FF5F6D, #FFC371);
+            box-shadow: 10px 10px 10px 10px #1e130c;
+            border-radius: 10px;
+        }
+        
+        .login {
+            width: 100%;
+            background-color: red;
+            height: 30px;
+            background: linear-gradient( #8E0E00, #ED213A, #93291E, #fd1d1d, #e35d5b, #e53935, #061161, #fcb045, #780206);
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <h1 style="color: white ; text-shadow:4px "> HOSTEL <span style="color:#520629">LOGIN</span> DETAILS </h1><br><br>
+
+        <br><br><strong><span style="color:rgb(77, 1, 1);font-size:20px;margin-left:50px"><i class="fa fa-user-circle" style="margin-right: 10px"></i>STUDENT'S ROLL NO: </span></strong><br><br> <input type="text" name="username" placeholder="Roll No:"
+            autocomplete="off" style="margin-left:50px;font-size: 20px;"><br><br>
+        <strong><span style="color:rgb(77, 1, 1);font-size:20px;margin-left:50px"><i class="fa fa-unlock-alt" style="margin-right: 10px"></i> LOGIN PASSWORD:</span></strong><br><br> <input type="password" name="pass" placeholder="Password:" style="font-size: 20px;margin-left:50px"></span>
+
+        <br><br><br> <input type="submit" value="LOGIN" class="login" style="color: black;font-size:20px">
+
+    </div>
+</body>
+
+</html>
