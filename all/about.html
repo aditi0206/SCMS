@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slidebar Navigation</title>
+    <link rel="icon" href="./images/mono.jpg" type=" icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <style>
+        #Text {
+            margin: 0 auto;
+            font-family: Tahoma, Geneva, sans-serif;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        #Text span {
+            display: block;
+            margin-bottom: 20px;
+        }
+        
+        #Text span:nth-child(1) {
+            font-size: 4em;
+            color: #ffffff;
+            text-shadow: 0px 5px 0px #959691, 0px 7px 0px #959691, 0px 15px 0px #383131;
+            line-height: 0.85;
+        }
+        
+        #Text span:nth-child(2) {
+            font-family: Pacifico;
+            color: red;
+            text-shadow: 0px 2px 0px white;
+            font-size: 20px;
+            margin-left: 150px;
+            margin-top: -25px;
+            transform: rotate(-15deg);
+        }
+        
+        .content {
+            width: 100%;
+            padding: 20px;
+            transition: 0.8s;
+        }
+        
+        .content img {
+            width: 100%;
+            max-width: 1200px;
+            display: block;
+            margin: auto;
+            border: 8px ridge white;
+        }
+        
+        @media(max-width:768px) {
+            .slidebar {
+                width: 100%;
+                text-align: center;
+            }
+            .header h1 {
+                display: none;
+            }
+        }
+        
+        .para {
+            color: white;
+            text-align: center;
+            border: 5px solid white;
+            border-radius: 10px;
+            width: 1450px;
+            height: 1500px;
+            background-image: linear-gradient( rgb(36, 5, 48) 10%, rgb(102, 12, 105) 70%);
+            border-style: ridge;
+            margin-top: 10px;
+        }
+        
+        .slidebar li a {
+            text-decoration: none;
+            color: white;
+            font-size: 30px;
+            list-style: none;
+        }
+        
+        .slidebar {
+            border: 1px solid rgb(138, 209, 209);
+            border-width: 20px;
+            border-style: ridge;
+        }
+        
+        i {
+            padding-right: 5px;
+        }
+        
+        .a {
+            float: right;
+            margin-top: -170px;
+            margin-right: 50px;
+        }
+    </style>
+</head>
+
+<body style="background-color: rgb(21, 21, 29);">
+    <a id="#"></a>
+    <div id="Text">
+        <span>ABOUT US </span>
+    </div>
+
+
+    <div class="slidebar">
+        <ul>
+            <li><a href="https://www.cud.ac.ae/about/mission-and-vision"><span><i class="fa fa-star"></i>Our mission and vision</span></a></li>
+            <li><a href="https://www.cud.ac.ae/about/facts-and-history"><span><i class="fa fa-star"></i>Facts and History </span></a></li>
+            <li><a href="https://www.cud.ac.ae/about/leadership"><span><i class="fa fa-star"></i>Leadership</span></a></li>
+            <li><a href="https://www.cud.ac.ae/faculties-and-departments"><span><i class="fa fa-star"></i>Faculties and Department</span></a></li>
+            <li><a href="https://www.cud.ac.ae/about/senior-management"><span><i class="fa fa-star"></i>Senior Management</span></a></li>
+            <div class="a">
+                <li><a href="https://www.cud.ac.ae/about/academic-staff" <span><i class="fa fa-star"></i></span>Our Faculty Members</a></li>
+                <li><a href="https://www.cud.ac.ae/why-cud" <span><i class="fa fa-star"></i></span>Why choose CUD?</a></li>
+                <li><a href="https://www.cud.ac.ae/testimonials" <span><i class="fa fa-star"></i></span>Our students and Graduates</a></li>
+                <li><a href="https://www.cud.ac.ae/about/accreditation" <span><i class="fa fa-star"></i></span>Accreditation</a></li>
+                <li><a href="https://www.cud.ac.ae/downloads/university-publications" <span><i class="fa fa-star"></i></span>Our Publications</a></li>
+            </div>
+        </ul>
+
+    </div>
+    <div class="content">
+        <img src="./uni.jpg" alt="">
+        <div class="para">
+            <p>
+                <h1 style="text-align: center;"><i class="fa fa-star"></i>Quick facts</h1>
+                <br>
+                <h2>
+                    1)Ranked in the top 2% (601-650) worldwide and top 4 in the UAE (QS World University Rankings 2022)</h2>
+                <br>
+                <h2>2)50+ international academic partners</h2><br>
+                <h2>3)40+ accredited programs & concentrations</h2><br>
+                <h2>4)120+ student nationalities joined.
+                    <h2><br>
+                        <h2>5)International Program Accreditation/Certification: CIMA, CFA, ACCA, IAA, PRSA, PRME, ECO Canada, & SHRM</h2><br>
+
+            </p>
+            <h1 style="text-align: center;"><i class="fa fa-star"></i>A Canadian education in the heart of Dubai</h1>
+            <h2>Canadian University Dubai (CUD) offers undergraduate and graduate degree programs based on a world-leading international curriculum. Located in the city’s vibrant business district, CUD gives students the unique opportunity to obtain a first-class
+                Canadian education while experiencing the dynamic lifestyle of Dubai, United Arab Emirates.</h2>
+            <h1><i class="fa fa-star"></i>A gateway to life in Canada</h1>
+            <h2>Each of our academic programs offers the option to start your higher education in Dubai, then transfer with credit to one of our Canadian or other international partners. Studying at CUD provides a gateway for students to pursue higher education,
+                research, and employment opportunities in Canada.</h2>
+            <h1 style="text-align: center;"><i class="fa fa-star"></i>A reputation for academic excellence</h1>
+            <h2>We collaborate with our Canadian partner institutions to develop world-class curricula, and our international faculty are leaders in their field. We deliver a wide range of undergraduate and graduate programs across disciplines in Architecture
+                & Interior Design; Communication and Media; Engineering, Applied Science and Technology; Management; Creative Industries; Environmental Health Sciences; and Social Sciences, including Psychology and Applied Sociology.</h2>
+            <h1 style="text-align: center;"><i class="fa fa-star"></i>A practice-based learning approach</h1>
+            <h2>Our industry-informed programs focus on critical work-related skills to give graduates a head-start in the UAE’s growing knowledge economy. We offer students unique opportunities to collaborate with senior faculty on applied research projects
+                and to explore innovation and entrepreneurship through our student business incubator.</h2>
+            <h1 style="text-align: center;"><i class="fa fa-star"></i>An outstanding student experience</h1>
+            <h2>Our diverse campus community represents over 120 different nationalities, and our vibrant student life ensures that every one of our graduates is equipped with the skills and experiences of global citizenship required to excel in the modern
+                business world.</h2>
+            <a href="#" class="go"><span style="color: white;font-size:30px">GO TO TOP</span></a>
+        </div>
+
+
+
+    </div>
+</body>
+
+</html>
