@@ -51,14 +51,32 @@
     <div class="container">
         <h1 style="color: white ; text-shadow:4px "> HOSTEL <span style="color:#520629">LOGIN</span> DETAILS </h1><br><br>
 
-        <br><br><strong><span style="color:rgb(77, 1, 1);font-size:20px;margin-left:50px"><i class="fa fa-user-circle" style="margin-right: 10px"></i>STUDENT'S ROLL NO: </span></strong><br><br> <input type="text" name="username" placeholder="Roll No:"
+        <br><br><strong><span style="color:rgb(77, 1, 1);font-size:20px;margin-left:50px"><i class="fa fa-user-circle" style="margin-right: 10px"></i>STUDENT'S ROLL NO: </span></strong><br><br> <input type="text" name="username" id="u" placeholder="Roll No:"
             autocomplete="off" style="margin-left:50px;font-size: 20px;"><br><br>
-        <strong><span style="color:rgb(77, 1, 1);font-size:20px;margin-left:50px"><i class="fa fa-unlock-alt" style="margin-right: 10px"></i> LOGIN PASSWORD:</span></strong><br><br> <input type="password" name="pass" placeholder="Password:" style="font-size: 20px;margin-left:50px"></span>
+        <strong><span style="color:rgb(77, 1, 1);font-size:20px;margin-left:50px"><i class="fa fa-unlock-alt" style="margin-right: 10px"></i> LOGIN PASSWORD:</span></strong><br><br> <input type="password" name="password" id="p" placeholder="Password:"
+            style="font-size: 20px;margin-left:50px"></span>
 
-        <br><br><br> <input type="submit" value="LOGIN" class="login" style="color: black;font-size:20px;">
+        <br><br><br> <input type="submit" value="LOGIN" class="login" style="color: black;font-size:20px;" onclick="validate();">
 
     </div>
 </body>
+<script>
+    function  validate()  {            
+        var  username  =  document.getElementById("u").value;            
+        var  password  =  document.getElementById("p").value;            
+        if  (username  ==  null  ||  username  ==  "")  {                
+            alert("Please enter the username and password");                
+            return  false;            
+        }            
+
+                 
+        if  (password  ==  null  ||  password  ==  "")  {                
+            alert("Please enter the password.");                
+            return  false;            
+        }            
+        alert('Login successful');                    
+    }
+</script>
 
 
 </html>
