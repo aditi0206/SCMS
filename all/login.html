@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LOGIN PAGE</title>
+    <link rel="icon" href="./images/mono.jpg" type=" icon">
+    <style>
+        body {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url('./images/univerlogin.jpg');
+        }
+        
+        .login {
+            margin: 200px;
+            margin-left: 600px;
+            margin-top: 260px;
+            border-radius: 10px;
+            border-style: ridge;
+            display: inline-block;
+            background: linear-gradient(#c31432, #240b36);
+            width: 20%;
+            height: 10%;
+            padding: 30px;
+            box-shadow: 10px 10px 10px 5px rgb(35, 35, 150);
+        }
+        
+        .loginbtn {
+            margin-left: 90px;
+        }
+        
+        #log {
+            padding: 5px;
+            font-size: 20px;
+            background-color: rgba(79, 79, 231, 0.616);
+            border-radius: 10px;
+            width: 150%;
+            margin-left: -100px;
+            background: linear-gradient(to right, #fffbd5, #b20a2c);
+            color: black;
+            font-weight: bold;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            box-shadow: 3px 3px 3px 3px black;
+        }
+        
+        #u {
+            height: 20px;
+            width: 58%;
+        }
+        
+        #p {
+            height: 20px;
+            width: 58%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login">
+        <label for="usern"><b><span style="border:2px solid black;padding:2px;background-color:rgb(241, 227, 227);color:black ;border-radius:5px ">USERNAME</span>  : </b></label>
+        <input type="text" placeholder="Enter Username" name="usern" id="u" required>
+
+        <br>
+        <br>
+        <label for="pass"><b><span style="border:2px solid black;padding:2px ;background-color:rgb(241, 227, 227) ;color:black;border-radius:5px ">PASSWORD</span> : </b></label>
+        <input type="text" placeholder="Enter the password" name="pass" id="p" required>
+        <br><br>
+        <div class="remember">
+            <span style="margin-left:120px;font-size:25px;color:whitesmoke;font-family:cursive">
+           
+           <br><br>
+            <input type="checkbox"name="remember" id="rem"> Remember Me</span>
+            </button>
+            </label>
+        </div>
+        <br><br>
+        <div class="loginbtn">
+
+            <input type="submit" value="LOGIN" id="log">
+
+
+        </div>
+
+        <br>
+
+    </div>
+</body>
+
+</html>
